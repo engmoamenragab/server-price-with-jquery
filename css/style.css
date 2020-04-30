@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 85%;
+  margin: 20px auto;
+}
+.content {
+  float: left;
+}
+.content-box {
+  width: 50%;
+}
+input {
+  border: 0;
+  color: #f6931f;
+  font-weight: bold;
+}

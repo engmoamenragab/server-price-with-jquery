@@ -11,6 +11,44 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body>
+    <div class="container">
+      <div class="content">
+        <div class="content-box">
+          <div class="content-box-item">
+            <div class="ranges">
+              <div class="win1-ram">
+                <p>
+                  <label for="ram-amount">RAM Size (1 GB increments):</label>
+                  <input type="text" id="ram-amount" readonly />
+                </p>
+                <div id="ram-slider"></div>
+              </div>
+              <div class="win1-hd">
+                <p>
+                  <label for="hd-amount">HD Size (100 GB increments):</label>
+                  <input type="text" id="hd-amount" readonly />
+                </p>
+                <div id="hd-slider"></div>
+              </div>
+              <div class="win1-bw">
+                <p>
+                  <label for="bw-amount">Bandwidth Size (50 GB increments):</label>
+                  <input type="text" id="bw-amount" readonly />
+                </p>
+                <div id="bw-slider"></div>
+              </div>
+              <div class="win1-db">
+                <p>
+                  <label for="db-amount">DB Number (1 increments):</label>
+                  <input type="text" id="db-amount" readonly />
+                </p>
+                <div id="db-slider"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
