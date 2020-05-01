@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 *,
 *::before,
 *::after {
@@ -5,11 +6,12 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: "Montserrat", sans-serif;
+}
 .container {
   width: 85%;
   margin: 20px auto;
-}
-.content {
 }
 .content-box {
   float: left;
@@ -24,10 +26,13 @@
   text-align: center;
   margin-bottom: 30px;
   font-size: 40px;
+  font-family: "Ubuntu", sans-serif;
 }
-.content-box-item-ranges {
+.content-box-item-title i {
+  margin-right: 10px;
+  color: #333;
 }
-.content-box-item-ranges .win1-ram {
+.content-box-item-ranges .sl-mg {
   margin: 20px auto;
 }
 input {
@@ -36,6 +41,36 @@ input {
   font-weight: bold;
 }
 .content-box-item-total {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+}
+.content-box-item-total ul {
+  list-style-type: none;
+}
+.content-box-item-total ul li {
+  display: block;
+  padding: 5px;
+}
+.content-box-item-total ul li:last-child {
+  border-top: 1px solid #333;
+}
+.content-box-item-button {
+  width: 100%;
+}
+.content-box-item-button button {
+  background: none;
+  border: none;
+  display: block;
+  width: 100%;
+}
+.content-box-item-button button a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #333;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
 }
 .clear-fix {
   clear: both;

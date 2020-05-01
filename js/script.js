@@ -14,7 +14,7 @@ $(document).ready(function () {
   // Win 1 Server Ranges HD Slider
   $("#hd-slider").slider({
     value: 1000,
-    min: 1,
+    min: 100,
     max: 1000,
     step: 100,
     slide: function (event, ui) {
