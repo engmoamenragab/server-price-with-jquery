@@ -10,7 +10,9 @@ $(document).ready(function () {
       $("#ram-amount").val(ui.value + " " + "GB");
     },
   });
-  $("#ram-amount").val($("#ram-slider").slider("value") + " " + "GB");
+  var ramSliderValue = $("#ram-slider").slider("value");
+  $("#ram-amount").val(ramSliderValue + " " + "GB");
+  $("#ram-price").val(ramSliderValue * 2 + " " + "$");
   // Win 1 Server Ranges HD Slider
   $("#hd-slider").slider({
     value: 1000,
@@ -21,7 +23,9 @@ $(document).ready(function () {
       $("#hd-amount").val(ui.value + " " + "GB");
     },
   });
-  $("#hd-amount").val($("#hd-slider").slider("value") + " " + "GB");
+  var hdSliderValue = $("#hd-slider").slider("value");
+  $("#hd-amount").val(hdSliderValue + " " + "GB");
+  $("#hd-price").val(hdSliderValue * 3 + " " + "$");
   // Win 1 Server Ranges BW Slider
   $("#bw-slider").slider({
     value: 1950,
@@ -32,7 +36,9 @@ $(document).ready(function () {
       $("#bw-amount").val(ui.value + " " + "GB");
     },
   });
-  $("#bw-amount").val($("#bw-slider").slider("value") + " " + "GB");
+  var bwSliderValue = $("#bw-slider").slider("value");
+  $("#bw-amount").val(bwSliderValue + " " + "GB");
+  $("#bw-price").val(bwSliderValue * 2 + " " + "$");
   // Win 1 Server Ranges DB Slider
   $("#db-slider").slider({
     value: 20,
@@ -43,5 +49,9 @@ $(document).ready(function () {
       $("#db-amount").val(ui.value + " " + "DB");
     },
   });
-  $("#db-amount").val($("#db-slider").slider("value") + " " + "DB");
+  var dbSliderValue = $("#db-slider").slider("value");
+  $("#db-amount").val(dbSliderValue + " " + "DB");
+  $("#db-price").val(dbSliderValue * 4 + " " + "$");
+  // Total Price For Server
+  $("#tp-price").val($("#ram-price").val() + $("#hd-price").val() + $("#bw-price").val() + $("#db-price").val());
 });

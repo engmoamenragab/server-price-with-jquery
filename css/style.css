@@ -35,6 +35,9 @@ body {
 .content-box-item-ranges .sl-mg {
   margin: 20px auto;
 }
+.content-box-item-ranges .slider {
+  margin: 10px auto;
+}
 input {
   border: 0;
   color: #f6931f;
@@ -50,7 +53,7 @@ input {
 }
 .content-box-item-total ul li {
   display: block;
-  padding: 5px;
+  padding: 20px 30px;
 }
 .content-box-item-total ul li:last-child {
   border-top: 1px solid #333;
@@ -63,6 +66,7 @@ input {
   border: none;
   display: block;
   width: 100%;
+  margin-top: 30px;
 }
 .content-box-item-button button a {
   display: block;
