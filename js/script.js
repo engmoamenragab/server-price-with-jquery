@@ -9,6 +9,14 @@ $(document).ready(function () {
     slide: function (event, ui) {
       $("#ram-amount").val(ui.value + " GB");
       $("#ram-price").val(ui.value * 2 + " $");
+      $.fn.calcTotalPrice = function () {
+        var ramPrice = parseInt($("#ram-price").val()),
+          hdPrice = parseInt($("#hd-price").val()),
+          bwPrice = parseInt($("#bw-price").val()),
+          dbPrice = parseInt($("#db-price").val());
+        $("#tp-price").val(ramPrice + hdPrice + bwPrice + dbPrice + " $");
+      };
+      $.fn.calcTotalPrice();
     },
   });
   var ramSliderValue = $("#ram-slider").slider("value");
@@ -23,6 +31,14 @@ $(document).ready(function () {
     slide: function (event, ui) {
       $("#hd-amount").val(ui.value + " GB");
       $("#hd-price").val(ui.value * 3 + " $");
+      $.fn.calcTotalPrice = function () {
+        var ramPrice = parseInt($("#ram-price").val()),
+          hdPrice = parseInt($("#hd-price").val()),
+          bwPrice = parseInt($("#bw-price").val()),
+          dbPrice = parseInt($("#db-price").val());
+        $("#tp-price").val(ramPrice + hdPrice + bwPrice + dbPrice + " $");
+      };
+      $.fn.calcTotalPrice();
     },
   });
   var hdSliderValue = $("#hd-slider").slider("value");
@@ -37,6 +53,14 @@ $(document).ready(function () {
     slide: function (event, ui) {
       $("#bw-amount").val(ui.value + " GB");
       $("#bw-price").val(ui.value * 2 + " $");
+      $.fn.calcTotalPrice = function () {
+        var ramPrice = parseInt($("#ram-price").val()),
+          hdPrice = parseInt($("#hd-price").val()),
+          bwPrice = parseInt($("#bw-price").val()),
+          dbPrice = parseInt($("#db-price").val());
+        $("#tp-price").val(ramPrice + hdPrice + bwPrice + dbPrice + " $");
+      };
+      $.fn.calcTotalPrice();
     },
   });
   var bwSliderValue = $("#bw-slider").slider("value");
@@ -51,13 +75,26 @@ $(document).ready(function () {
     slide: function (event, ui) {
       $("#db-amount").val(ui.value + " DB");
       $("#db-price").val(ui.value * 4 + " $");
+      $.fn.calcTotalPrice = function () {
+        var ramPrice = parseInt($("#ram-price").val()),
+          hdPrice = parseInt($("#hd-price").val()),
+          bwPrice = parseInt($("#bw-price").val()),
+          dbPrice = parseInt($("#db-price").val());
+        $("#tp-price").val(ramPrice + hdPrice + bwPrice + dbPrice + " $");
+      };
+      $.fn.calcTotalPrice();
     },
   });
   var dbSliderValue = $("#db-slider").slider("value");
   $("#db-amount").val(dbSliderValue + " DB");
   $("#db-price").val(dbSliderValue * 4 + " $");
   // Total Price For Server
-  $("#tp-price").val(
-    parseInt($("#ram-price").val()) + parseInt($("#hd-price").val()) + parseInt($("#bw-price").val()) + parseInt($("#db-price").val()) + " $"
-  );
+  $.fn.calcTotalPrice = function () {
+    var ramPrice = parseInt($("#ram-price").val()),
+      hdPrice = parseInt($("#hd-price").val()),
+      bwPrice = parseInt($("#bw-price").val()),
+      dbPrice = parseInt($("#db-price").val());
+    $("#tp-price").val(ramPrice + hdPrice + bwPrice + dbPrice + " $");
+  };
+  $.fn.calcTotalPrice();
 });
